@@ -11,6 +11,7 @@ interface NavbarProps {
 export default function Navbar({ solid = false, activeDropdown }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     if (solid) return;
@@ -27,7 +28,10 @@ export default function Navbar({ solid = false, activeDropdown }: NavbarProps) {
     .filter(Boolean)
     .join(" ");
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
 
   return (
     <nav className={navClass} id="nav">
@@ -39,11 +43,11 @@ export default function Navbar({ solid = false, activeDropdown }: NavbarProps) {
         <ul className={`nav-links${menuOpen ? " open" : ""}`} id="navLinks">
           <li>
             <Link href="/#nosotros" onClick={closeMenu}>
-              Casa
+              Inicio
             </Link>
           </li>
-          <li className="nav-dropdown">
-            <a href="#" className="nav-dropdown-trigger" onClick={(e) => e.preventDefault()}>
+          <li className={`nav-dropdown${dropdownOpen ? " mob-open" : ""}`}>
+            <a href="#" className="nav-dropdown-trigger" onClick={(e) => { e.preventDefault(); setDropdownOpen((o) => !o); }}>
               Unidades <i className="fas fa-chevron-down" />
             </a>
             <div className="nav-dropdown-menu">
@@ -92,6 +96,11 @@ export default function Navbar({ solid = false, activeDropdown }: NavbarProps) {
               Contacto
             </Link>
           </li>
+          <li className="nav-mobile-cta">
+            <a href="https://wa.me/5493517633333" className="book-btn" onClick={closeMenu}>
+              Reservar
+            </a>
+          </li>
         </ul>
 
         <a href="https://wa.me/5493517633333" className="book-btn">
@@ -102,7 +111,7 @@ export default function Navbar({ solid = false, activeDropdown }: NavbarProps) {
           id="menuToggle"
           onClick={() => setMenuOpen((o) => !o)}
         >
-          <i className="fas fa-bars" />
+          <i className={menuOpen ? "fas fa-times" : "fas fa-bars"} />
         </button>
       </div>
     </nav>
