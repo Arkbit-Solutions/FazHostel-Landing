@@ -41,7 +41,7 @@ export default async function StudioDetailPage({
     <>
       <Navbar solid activeDropdown={room.activeNav} />
       <PageHeader
-        backgroundImage={room.image}
+        backgroundImage={room.headerImage || room.image}
         eyebrow={`${room.number} — Studio`}
         h1Html={room.name}
         crumbs={[

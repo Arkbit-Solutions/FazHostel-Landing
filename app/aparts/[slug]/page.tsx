@@ -41,7 +41,7 @@ export default async function ApartDetailPage({
     <>
       <Navbar solid activeDropdown={room.activeNav} />
       <PageHeader
-        backgroundImage={room.image}
+        backgroundImage={room.headerImage || room.image}
         eyebrow={`${room.number} — Apart`}
         h1Html={room.name}
         crumbs={[
