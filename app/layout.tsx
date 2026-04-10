@@ -5,6 +5,29 @@ export const metadata: Metadata = {
   title: "Faz Hostel — Cofico, Córdoba",
   description:
     "Faz Hostel - Alojamiento en Córdoba, Argentina. Habitaciones compartidas, privadas, studios y departamentos en Barrio Cofico.",
+  openGraph: {
+    title: "Faz Hostel — Cofico, Córdoba",
+    description:
+      "Faz Hostel - Alojamiento en Córdoba, Argentina. Habitaciones compartidas, privadas, studios y departamentos en Barrio Cofico.",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Faz Travel Logo",
+      },
+    ],
+    type: "website",
+    locale: "es_AR",
+    siteName: "Faz Hostel",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faz Hostel — Cofico, Córdoba",
+    description:
+      "Faz Hostel - Alojamiento en Córdoba, Argentina. Habitaciones compartidas, privadas, studios y departamentos en Barrio Cofico.",
+    images: ["/logo.jpeg"],
+  },
 };
 
 export default function RootLayout({
