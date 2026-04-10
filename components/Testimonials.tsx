@@ -2,19 +2,28 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const voices = [
   {
-    text: "Superó mis expectativas. Súper equipado y con un trato del personal que se siente genuino. Vuelvo cada vez que paso por Córdoba.",
-    name: "María C.",
-    from: "Buenos Aires, Argentina",
+    text: "Todo muy limpio, la gente muy linda, el desayuno cumple. Muy buen servicio de la señora que prepara el desayuno, Verónica creo que es, impecable la atención. Sin más que decir, recomiendo 10/10.",
+    name: "Díaz",
+    initials: "D",
+    source: "Booking",
   },
   {
-    text: "Lo que más destaco: la calidez del personal. Siempre atentos, siempre dispuestos. Las instalaciones, impecables.",
-    name: "Javier L.",
-    from: "Madrid, España",
+    text: "El departamento un lujo, daba lástima usarlo, todo impecable, muy espacioso. ¡Nos encantó!",
+    name: "Martínez",
+    initials: "M",
+    source: "Booking",
   },
   {
-    text: "Limpieza impecable, ubicación ideal y una onda espectacular. Conocés gente de todos lados y te sentís en casa.",
-    name: "Sofía R.",
-    from: "Santiago, Chile",
+    text: "Superó mis expectativas, muy buen Hostel, súper equipado, excelente trato de todo el personal. La cocina muy bien equipada, las habitaciones amplias, los ambientes compartidos muy lindos. Un mil.",
+    name: "Romina",
+    initials: "R",
+    source: "TripAdvisor",
+  },
+  {
+    text: "Excelente condiciones de las instalaciones, muy cálidos todos los ambientes en común, hermosa la decoración. Destacable la calidad y disponibilidad del personal para atender cualquier duda que uno pueda tener.",
+    name: "Luis",
+    initials: "L",
+    source: "TripAdvisor",
   },
 ];
 
@@ -51,12 +60,17 @@ export default function Testimonials() {
 
         <div className="voices-grid">
           {voices.map((v) => (
-            <RevealOnScroll className="voice" key={v.name}>
-              <Stars />
-              <p>{v.text}</p>
+            <RevealOnScroll className="voice-card" key={v.name}>
+              <div className="voice-card-top">
+                <Stars />
+                <p>{v.text}</p>
+              </div>
               <div className="voice-by">
-                <strong>{v.name}</strong>
-                <small>{v.from}</small>
+                <div className="voice-avatar">{v.initials}</div>
+                <div className="voice-by-info">
+                  <strong>{v.name}</strong>
+                  <small>{v.source}</small>
+                </div>
               </div>
             </RevealOnScroll>
           ))}
