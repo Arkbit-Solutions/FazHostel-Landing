@@ -1,4 +1,4 @@
-// File: C:\Users\Federico Tahan\source\repos\tours-front\landing-react\app\habitaciones\page.tsx
+// File: C:\Users\simon\OneDrive\Desktop\repos\personal\FazHostel-Landing\app\habitaciones\page.tsx
 import * as entry from '../../../../app/habitaciones/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

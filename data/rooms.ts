@@ -27,6 +27,8 @@ export interface Room {
   descDetail: string;
   headerDesc: string;
   image: string;
+  headerImage?: string;
+  gallery?: string[];
   tags: RoomTag[];
   specs: RoomSpec[];
   amenities: Amenity[];
@@ -151,7 +153,9 @@ export const rooms: Room[] = [
     descList: "Habitación compartida mixta de 6 personas. Cómoda y equilibrada, con 3 literas equipadas con luz individual, enchufe, apoyo personal y cortina roller para mayor privacidad. Incluye lockers amplios con candado y baño compartido.",
     descDetail: "Habitación compartida mixta de 6 personas. Cómoda y equilibrada, ideal para una experiencia compartida con confort. Dispone de 3 camas tipo litera, cada una con luz individual, enchufe, espacio de apoyo y cortina roller que brinda mayor privacidad. Incluye lockers amplios con candado donde entra una valija y baño compartido.",
     headerDesc: "Cómoda y equilibrada. Una compartida mixta de 6 personas con todo lo que necesitás para descansar bien.",
-    image: `${CDN}/11_538508.jpg`,
+    image: "/Galerias/tierra/galeria-1.jpg",
+    headerImage: "/Galerias/tierra/header.jpg",
+    gallery: ["/Galerias/tierra/galeria-1.jpg", "/Galerias/tierra/galeria-2.jpg", "/Galerias/tierra/galeria-3.jpg"],
     tags: [
       { icon: "fa-bed", text: "3 literas" },
       { icon: "fa-lock", text: "Lockers" },
@@ -178,7 +182,9 @@ export const rooms: Room[] = [
     descList: "Habitación compartida mixta de 8 personas. Un espacio dinámico pensado para viajeros que disfrutan compartir. Ofrece 4 literas con luz individual, enchufe, apoyo personal y cortina roller. Lockers de gran tamaño y baño compartido.",
     descDetail: "Habitación compartida mixta de 8 personas. Un espacio dinámico pensado para viajeros que disfrutan compartir. Ofrece 4 camas tipo litera con luz individual, enchufe, apoyo personal y cortina roller para mayor intimidad. Cuenta con lockers de gran tamaño con candado y baño compartido.",
     headerDesc: "Dinámica y social. Una compartida mixta de 8 personas pensada para los que disfrutan compartir el camino.",
-    image: `${CDN}/12_938812.jpg`,
+    image: "/Galerias/agua/galeria-1.jpg",
+    headerImage: "/Galerias/agua/header.jpg",
+    gallery: ["/Galerias/agua/galeria-1.jpg", "/Galerias/agua/galeria-2.jpg", "/Galerias/agua/galeria-3.jpg"],
     tags: [
       { icon: "fa-bed", text: "4 literas" },
       { icon: "fa-lock", text: "Lockers XL" },
@@ -215,7 +221,9 @@ export const rooms: Room[] = [
     descList: "Habitación compartida mixta de 8 personas. Amplia y funcional, ideal para grupos o viajeros sociales. 4 literas totalmente equipadas con luz de lectura, enchufe, espacio personal y cortina roller. Lockers amplios y baño compartido.",
     descDetail: "Habitación compartida mixta de 8 personas. Amplia y funcional, ideal para grupos o viajeros sociales. Dispone de 4 camas litera totalmente equipadas con luz de lectura, enchufe, espacio personal y cortina roller. Incluye lockers amplios con candado para equipaje y baño compartido.",
     headerDesc: "Amplia y funcional. Una compartida mixta de 8 personas, ideal para grupos y viajeros sociales.",
-    image: `${CDN}/13_616848.jpg`,
+    image: "/Galerias/fuego/galeria-1.jpg",
+    headerImage: "/Galerias/fuego/header.jpg",
+    gallery: ["/Galerias/fuego/galeria-1.jpg", "/Galerias/fuego/galeria-2.jpg", "/Galerias/fuego/galeria-3.jpg"],
     tags: [
       { icon: "fa-bed", text: "4 literas" },
       { icon: "fa-lock", text: "Lockers" },
@@ -255,7 +263,9 @@ export const rooms: Room[] = [
     descList: "La más flexible de nuestras compartidas. Dos literas (cuatro plazas) con opción de sumar cama marinera para configuración quíntuple. Puede reservarse como doble privada o cuádruple. Luz individual, enchufe, cortina roller, lockers amplios y baño compartido.",
     descDetail: "La más flexible de nuestras compartidas. Cuenta con dos literas (cuatro plazas) y opción de sumar cama marinera para configuración quíntuple. Puede reservarse como habitación doble privada o cuádruple. Cada cama dispone de luz individual, enchufe, espacio de apoyo, cortina roller, lockers amplios y baño compartido.",
     headerDesc: "Flexible y adaptable. De habitación doble privada a cuádruple o quíntuple, según cómo viajes.",
-    image: `${CDN}/14_102705.jpg`,
+    image: "/Galerias/aire/galeria-1.jpg",
+    headerImage: "/Galerias/aire/header.jpg",
+    gallery: ["/Galerias/aire/galeria-1.jpg", "/Galerias/aire/galeria-2.jpg", "/Galerias/aire/galeria-3.jpg", "/Galerias/aire/galeria-4.jpg", "/Galerias/aire/galeria-5.jpg", "/Galerias/aire/galeria-6.jpg"],
     tags: [
       { icon: "fa-bed", text: "2 literas" },
       { icon: "fa-users", text: "Doble o cuádruple" },
@@ -551,7 +561,7 @@ export const categoryPages: Record<string, CategoryPage> = {
     eyebrow: "Dónde dormir",
     h1Html: 'Cuatro elementos,<br>cuatro <em>refugios.</em>',
     headerDesc: "Tierra, Agua, Fuego y Aire. Cada habitación tiene su propia personalidad — elegí la que mejor acompañe tu viaje.",
-    headerImage: `${CDN}/11_538508.jpg`,
+    headerImage: "/Galerias/tierra/header.jpg",
     ctaH2Html: '¿Lista o listo<br>para <em>quedarte?</em>',
     ctaDesc: "Mejor precio garantizado. Confirmación inmediata por WhatsApp. Te respondemos personalmente, no un bot.",
     ctaBtnText: "Escribinos por WhatsApp",

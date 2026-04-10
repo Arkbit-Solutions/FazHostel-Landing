@@ -41,7 +41,7 @@ export default async function HabitacionDetailPage({
     <>
       <Navbar solid activeDropdown={room.activeNav} />
       <PageHeader
-        backgroundImage={room.image}
+        backgroundImage={room.headerImage || room.image}
         eyebrow={room.eyebrowDetail.replace(/·.*/, "— Habitación")}
         h1Html={room.name}
         crumbs={[

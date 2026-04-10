@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 
 interface Crumb {
@@ -33,7 +34,7 @@ export default function PageHeader({
             <h1 dangerouslySetInnerHTML={{ __html: h1Html }} />
             <div className="crumbs">
               {crumbs.map((crumb, i) => (
-                <span key={i}>
+                <React.Fragment key={i}>
                   {i > 0 && <span />}
                   {crumb.href ? (
                     <Link href={crumb.href}>{crumb.label}</Link>
@@ -49,7 +50,7 @@ export default function PageHeader({
                       {crumb.label}
                     </span>
                   )}
-                </span>
+                </React.Fragment>
               ))}
             </div>
           </div>

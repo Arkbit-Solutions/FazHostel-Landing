@@ -1,12 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/habitaciones/[slug]/page": "app/habitaciones/[slug]/page.js",
   "/habitaciones/page": "app/habitaciones/page.js",
-  "/aparts/[slug]/page": "app/aparts/[slug]/page.js",
-  "/privadas/[slug]/page": "app/privadas/[slug]/page.js",
-  "/aparts/page": "app/aparts/page.js",
-  "/studios/page": "app/studios/page.js",
-  "/privadas/page": "app/privadas/page.js",
-  "/studios/[slug]/page": "app/studios/[slug]/page.js"
+  "/page": "app/page.js"
 }

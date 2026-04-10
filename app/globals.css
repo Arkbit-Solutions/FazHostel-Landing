@@ -130,6 +130,7 @@ img { max-width: 100%; display: block; }
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 36px;
     list-style: none;
 }
@@ -821,7 +822,7 @@ section { position: relative; }
 
 .room-media {
     position: relative;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 4;
     overflow: hidden;
     background: var(--cream-deep);
 }
@@ -1142,6 +1143,60 @@ section { position: relative; }
     line-height: 1.3;
 }
 
+/* ============ ROOM GALLERY ============ */
+.room-gallery {
+    margin-top: 70px;
+    padding-top: 60px;
+    border-top: 1px solid var(--rule);
+}
+
+.room-gallery-head {
+    margin-bottom: 36px;
+}
+
+.room-gallery-head .eyebrow {
+    margin-bottom: 14px;
+}
+
+.room-gallery-head h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    font-weight: 300;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.room-gallery-head h3 em {
+    font-style: italic;
+    color: var(--clay);
+}
+
+.room-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.room-gallery-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--cream-deep);
+}
+
+.room-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.room-gallery-item:hover img {
+    transform: scale(1.06);
+}
+
 /* ============ EXPERIENCE / SERVICES ============ */
 .experience {
     background: var(--ink);
@@ -1276,17 +1331,50 @@ section { position: relative; }
     padding: 140px 0 100px;
 }
 
+.gallery-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.gallery-tab {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: 1px solid var(--rule);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.gallery-tab:hover {
+    color: var(--ink);
+    border-color: var(--ink-soft);
+}
+
+.gallery-tab.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+}
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 110px;
-    gap: 18px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
 }
 
 .g-item {
     position: relative;
     overflow: hidden;
     background: var(--cream-deep);
+    aspect-ratio: 4 / 3;
 }
 
 .g-item img {
@@ -1297,14 +1385,6 @@ section { position: relative; }
 }
 
 .g-item:hover img { transform: scale(1.06); }
-
-.g-1  { grid-column: span 5; grid-row: span 4; }
-.g-2  { grid-column: span 4; grid-row: span 3; }
-.g-3  { grid-column: span 3; grid-row: span 3; }
-.g-4  { grid-column: span 4; grid-row: span 3; }
-.g-5  { grid-column: span 3; grid-row: span 3; }
-.g-6  { grid-column: span 5; grid-row: span 3; }
-.g-7  { grid-column: span 7; grid-row: span 3; }
 
 /* ============ TESTIMONIALS ============ */
 .voices {
@@ -1702,10 +1782,11 @@ footer {
     .exp-item { min-height: 300px; padding: 48px 32px 52px; }
     .exp-num { font-size: 120px; }
 
-    .gallery-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 90px; }
-    .g-1 { grid-column: span 6; grid-row: span 4; }
-    .g-2, .g-4, .g-6 { grid-column: span 3; grid-row: span 3; }
-    .g-3, .g-5, .g-7 { grid-column: span 3; grid-row: span 3; }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-tabs { gap: 8px; }
+    .gallery-tab { padding: 10px 18px; font-size: 11px; }
+
+    .room-gallery { margin-top: 50px; padding-top: 40px; }
 
     .voices-grid { grid-template-columns: 1fr; }
     .voice { border-right: none; border-bottom: 1px solid var(--rule); padding: 40px 0 !important; }
@@ -1719,6 +1800,10 @@ footer {
 
 @media (max-width: 720px) {
     .wrap { padding: 0 20px; }
+
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .gallery-tab { padding: 8px 14px; font-size: 10px; }
+    .room-gallery-grid { grid-template-columns: 1fr; }
 
     .nav-links {
         display: none;

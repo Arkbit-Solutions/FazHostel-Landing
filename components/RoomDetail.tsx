@@ -57,6 +57,24 @@ export default function RoomDetail({ room }: RoomDetailProps) {
             ))}
           </div>
         </div>
+
+        {room.gallery && room.gallery.length > 0 && (
+          <div className="room-gallery">
+            <div className="room-gallery-head">
+              <span className="eyebrow">Galería</span>
+              <h3>
+                Conocé el <em>espacio.</em>
+              </h3>
+            </div>
+            <div className="room-gallery-grid">
+              {room.gallery.map((src, i) => (
+                <div className="room-gallery-item" key={i}>
+                  <img src={src} alt={room.name} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
