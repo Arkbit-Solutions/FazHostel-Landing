@@ -41,7 +41,7 @@ export default async function PrivadaDetailPage({
     <>
       <Navbar solid activeDropdown={room.activeNav} />
       <PageHeader
-        backgroundImage={room.image}
+        backgroundImage={room.headerImage || room.image}
         eyebrow={`${room.number} — Suite`}
         h1Html={room.name}
         crumbs={[

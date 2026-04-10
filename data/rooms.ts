@@ -306,7 +306,9 @@ export const rooms: Room[] = [
     descList: "Más amplia y luminosa, ofrece un entorno cómodo y relajado. Cuenta con cama matrimonial fija, ventana con luz natural, baño en suite, Smart TV y aire acondicionado para una experiencia superior.",
     descDetail: "Más amplia y luminosa, ofrece un entorno cómodo y relajado. Cuenta con cama matrimonial fija, ventana con luz natural, baño en suite, Smart TV y aire acondicionado para una experiencia superior.",
     headerDesc: "Amplia, luminosa y pensada para que la pausa sea verdaderamente una pausa.",
-    image: `${CDN}/1_721041.jpg`,
+    image: "/Galerias/suite-matrimonial-deluxe/1.jpg",
+    headerImage: "/Galerias/suite-matrimonial-deluxe/1.jpg",
+    gallery: Array.from({ length: 17 }, (_, i) => `/Galerias/suite-matrimonial-deluxe/${i + 1}.jpg`),
     tags: [
       { icon: "fa-bed", text: "Matrimonial fija" },
       { icon: "fa-bath", text: "Baño en suite" },
@@ -333,7 +335,9 @@ export const rooms: Room[] = [
     descList: "Más amplia y luminosa, ofrece un entorno cómodo y relajado. Cuenta con cama matrimonial fija, ventana con luz natural, baño en suite, Smart TV y aire acondicionado para una experiencia superior.",
     descDetail: "Más amplia y luminosa, ofrece un entorno cómodo y relajado. Cuenta con cama matrimonial fija, ventana con luz natural, baño en suite, Smart TV y aire acondicionado para una experiencia superior.",
     headerDesc: "Cómoda y luminosa, con acceso a piscina. Tu pausa perfecta en pleno Cofico.",
-    image: `${CDN}/2_339246.jpg`,
+    image: "/Galerias/suite-matrimonial-standar/1.jpg",
+    headerImage: "/Galerias/suite-matrimonial-standar/1.jpg",
+    gallery: Array.from({ length: 12 }, (_, i) => `/Galerias/suite-matrimonial-standar/${i + 1}.jpg`),
     tags: [
       { icon: "fa-bed", text: "Matrimonial fija" },
       { icon: "fa-bath", text: "Baño en suite" },
@@ -360,7 +364,7 @@ export const rooms: Room[] = [
     descList: "Versátil y confortable. Puede configurarse con dos camas twin o una cama matrimonial, adaptándose a cada huésped al momento de reserva. Dispone de baño en suite, Smart TV y aire acondicionado.",
     descDetail: "Versátil y confortable. Puede configurarse con dos camas twin o una cama matrimonial, adaptándose a cada huésped al momento de reserva. Dispone de baño en suite, Smart TV y aire acondicionado.",
     headerDesc: "Versátil y confortable. Se adapta a cómo viajes — twin o matrimonial, vos elegís.",
-    image: `${CDN}/3_607803.jpg`,
+    image: "/Galerias/suite-matrimonial-deluxe/12.jpg",
     tags: [
       { icon: "fa-bed", text: "Twin o matrimonial" },
       { icon: "fa-bath", text: "Baño en suite" },
