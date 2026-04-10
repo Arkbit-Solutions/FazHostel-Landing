@@ -1386,6 +1386,40 @@ section { position: relative; }
 
 .g-item:hover img { transform: scale(1.06); }
 
+.gallery-tab-count {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    opacity: 0.45;
+}
+
+.gallery-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.gallery-more-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.gallery-more-btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
 /* ============ TESTIMONIALS ============ */
 .voices {
     background: var(--paper);
