@@ -15,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <meta name="color-scheme" content="light only" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

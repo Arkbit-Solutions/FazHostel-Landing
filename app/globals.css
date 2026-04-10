@@ -2,6 +2,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
+    color-scheme: light only;
     --cream:        #f3ece0;
     --cream-deep:   #ece3d2;
     --paper:        #fbf7ef;

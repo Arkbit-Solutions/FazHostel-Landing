@@ -4,7 +4,8 @@
       "Bash(npx next:*)",
       "Bash(npx tsc:*)",
       "Bash(grep -E \"\\\\\\\\.css|\\\\\\\\.scss|tailwind|postcss\")",
-      "Bash(grep -n \"style=\" \"/c/Users/Federico Tahan/source/repos/FazHostel-Landing/components\"/*.tsx)"
+      "Bash(grep -n \"style=\" \"/c/Users/Federico Tahan/source/repos/FazHostel-Landing/components\"/*.tsx)",
+      "Bash(grep -n \"#[0-9a-fA-F]\\\\{3,6\\\\}\\\\|rgb\\\\|hsl\" \"/c/Users/Federico Tahan/source/repos/FazHostel-Landing/app/globals.css\")"
     ]
   }
 }
