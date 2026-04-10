@@ -15,7 +15,7 @@ export default function AboutSection() {
               <img src={`${CDN}/8_17387.jpg`} alt="Faz Hostel interior" />
             </div>
             <div className="about-num">
-              <strong>8 años</strong>
+              <strong>+8 años</strong>
               <small>Recibiendo viajeros</small>
             </div>
           </RevealOnScroll>
