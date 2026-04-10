@@ -119,7 +119,7 @@ export default function Footer({ col2 }: FooterProps) {
 
         <div className="footer-bottom">
           <div>&copy; 2026 Faz Hostel &middot; Cofico, Córdoba</div>
-          <div>Hecho a mano en Argentina</div>
+
         </div>
       </div>
     </footer>
